@@ -1,0 +1,76 @@
+@import "./vars";
+
+// media //
+@mixin mobile {
+  @media (min-width: 320px) and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin iPad {
+  @media (min-width: 768px) and (max-width: 1023px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 1024px) and (max-width: 1279px) {
+    @content;
+  }
+}
+
+@mixin onDesktop {
+  @media (min-width: 1280px) and (max-width: 1919px) {
+    @content;
+  }
+}
+
+@mixin full {
+  @media (min-width: 1920px) {
+    @content;
+  }
+}
+
+@mixin button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  width: 248px;
+  border: none;
+  border-radius: 40px;
+  @include content-text;
+  cursor: pointer;
+  background-color: $button-color;
+
+  &:hover {
+    background-color: #12122d;
+  }
+
+  @include mobile {
+    height: 40px;
+    width: 114px;
+  }
+}
+
+@mixin inputs {
+  display: flex;
+  height: 70px;
+  width: 248px;
+  border-radius: 40px;
+  border: 1px solid transparent;
+  padding: 20px 35px;
+  box-sizing: border-box;
+  @include bodyText;
+  background-color: $background-block;
+
+  &::placeholder {
+    @include bodyText;
+    color: $text-color;
+  }
+
+  @include mobile {
+    width: 212px;
+    height: 44px;
+  }
+}
