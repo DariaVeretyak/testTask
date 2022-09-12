@@ -21,15 +21,13 @@ export const UserCard: React.FC<Props> = ({ user, showPosts, selectedUserId }) =
         <p className="userCard__info">{user.name}</p>
         <a
           className="userCard__info"
-          type="email"
-          href={user.email}
+          href='mailto: ${user.email}'
         >
           {user.email}
         </a>
         <a
           className="userCard__info"
-          type="tel"
-          href={user.phone}
+          href="tel: ${user.phone}"
         >
           {user.phone}
         </a>

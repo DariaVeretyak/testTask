@@ -1,6 +1,6 @@
 {
   "name": "my-app",
-  "homepage": "https://github.com/DariaVeretyak/testTask",
+  "homepage": "https://dariaveretyak.github.io/testTask/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -45,5 +45,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
   }
 }
